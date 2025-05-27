@@ -1,0 +1,178 @@
+<style>
+.banderas-fila {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.bandera-caja {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.bandera-caja img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.bandera-caja .texto-hover {
+  position: absolute;
+  inset: 0;
+  background-color: #3d1152;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
+}
+
+.bandera-caja:hover img {
+  opacity: 0.2;
+}
+
+.bandera-caja:hover .texto-hover {
+  opacity: 1;
+}
+
+/* POPUP + animación */
+.popup-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: block;
+  visibility: hidden;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 998;
+}
+
+.popup-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: block;
+  visibility: hidden;
+  pointer-events: none;
+
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.popup.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.popup h3 {
+  margin-bottom: 15px;
+}
+
+.popup a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #3d1152;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Mobile (≤ 767px) */
+@media (max-width: 767px) {
+  .banderas-fila {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .bandera-caja {
+    width: 100%;
+    max-width: 300px;
+    height: 150px;
+    margin: 0 auto;
+  }
+}
+</style>
+
+<div class="banderas-fila">
+  <div class="bandera-caja" onclick="abrirPopup('Argentina', 'Av. Corrientes 1234, Buenos Aires', 'https://maps.google.com?q=Av.+Corrientes+1234,+Buenos+Aires')">
+    <img src="http://gidio.llc/wp-content/uploads/2025/05/Gidio7.png" alt="Argentina">
+    <div class="texto-hover">Argentina</div>
+  </div>
+  <div class="bandera-caja" onclick="abrirPopup('Brasil', 'Av. Paulista 456, São Paulo', 'https://maps.google.com?q=Av.+Paulista+456,+Sao+Paulo')">
+    <img src="http://gidio.llc/wp-content/uploads/2025/05/Gidio6.png" alt="Brasil">
+    <div class="texto-hover">Brasil</div>
+  </div>
+  <div class="bandera-caja" onclick="abrirPopup('Estados Unidos', '5th Avenue 789, New York', 'https://maps.google.com?q=5th+Avenue+789,+New+York')">
+    <img src="http://gidio.llc/wp-content/uploads/2025/05/Gidio5.png" alt="Estados Unidos">
+    <div class="texto-hover">Estados Unidos</div>
+  </div>
+</div>
+
+<!-- Popup -->
+<div class="popup-overlay" onclick="cerrarPopup()"></div>
+<div class="popup" id="popup">
+  <div class="popup-close" onclick="cerrarPopup()">×</div>
+  <h3 id="popup-titulo"></h3>
+  <p id="popup-direccion"></p>
+  <a id="popup-link" href="#" target="_blank">Ver en Google Maps</a>
+</div>
+
+<script>
+function abrirPopup(titulo, direccion, link) {
+  document.getElementById('popup-titulo').innerText = titulo;
+  document.getElementById('popup-direccion').innerText = direccion;
+  document.getElementById('popup-link').href = link;
+  document.querySelector('.popup').classList.add('visible');
+  document.querySelector('.popup-overlay').classList.add('visible');
+}
+
+function cerrarPopup() {
+  document.querySelector('.popup').classList.remove('visible');
+  document.querySelector('.popup-overlay').classList.remove('visible');
+}
+</script>

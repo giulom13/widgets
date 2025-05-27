@@ -1,0 +1,135 @@
+<div class="accordion-horizontal">
+  <div class="panel" style="background-image: url('http://gidio.llc/wp-content/uploads/2025/05/Gidio8_Asesoria-comercial.png');">
+    <div class="content">
+      <h2>Asesoría comercial</h2>
+      <hr />
+      <p>Optimizamos tu estrategia de ventas y expansión.</p>
+    </div>
+  </div>
+  <div class="panel" style="background-image: url('http://gidio.llc/wp-content/uploads/2025/05/Gidio9_-Gestion-de-importacion.png');">
+    <div class="content">
+      <h2>Gestión de importación</h2>
+      <hr />
+      <p>Nos ocupamos de la burocracia y trámites.</p>
+    </div>
+  </div>
+  <div class="panel" style="background-image: url('http://gidio.llc/wp-content/uploads/2025/05/Gidio10_-Marketing-y-posicionamiento.png');">
+    <div class="content">
+      <h2>Marketing y posicionamiento</h2>
+      <hr />
+      <p>Conectamos tu producto con tu cliente ideal.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+.accordion-horizontal {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  font-family: inherit;
+  /* Eliminado gap para que no haya espacio entre paneles */
+  transition: all 0.4s ease;
+}
+
+.panel {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 0; /* Sin bordes redondeados para que estén pegados */
+  box-shadow: none; /* Sin sombra para evitar efecto de separación */
+  margin: 0; /* Sin márgenes */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition:
+    background-color 0.3s ease,
+    flex 0.4s ease;
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.6);
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 0;
+}
+
+.panel:hover::before,
+.panel:hover::after {
+  opacity: 0;
+}
+
+.panel:hover {
+  background-image: none !important;
+  background-color: #3d1152;
+  color: white;
+  flex: 3;
+  transition:
+    background-color 0.3s ease,
+    flex 0.4s ease;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.content h2, .content p {
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+.content h2 {
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.content hr {
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.7);
+  margin: 10px auto;
+  width: 40px;
+}
+
+.content p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 90%;
+}
+
+@media (max-width: 768px) {
+  .accordion-horizontal {
+    flex-direction: column;
+    height: auto;
+  }
+  .panel {
+    flex: none;
+    height: auto;
+    margin-bottom: 16px;
+    transition: none !important;
+  }
+}
+</style>

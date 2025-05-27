@@ -1,0 +1,83 @@
+<div class="horizontal-accordion">
+  <div class="accordion-item">
+    <div class="accordion-content">
+      <p>Diseñamos estrategias de marketing personalizadas</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-content">
+      <p>Fortalecemos la conexión entre los productos y los consumidores</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-content">
+      <p>Acompañamos a cada productor en cada etapa del proceso</p>
+    </div>
+  </div>
+</div>
+
+<style>
+.horizontal-accordion {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 16px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.accordion-item {
+  flex: 1;
+  min-width: 250px;
+  min-height: 200px;
+  padding: 40px 20px;
+  background: #ffffff;
+  color: #000000;
+  transition: flex 0.6s ease, background 0.2s ease-in, color 0.4s ease;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.accordion-content {
+  max-width: 220px;
+  width: 100%;
+}
+
+.accordion-content p {
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.5;
+  color: inherit;
+}
+
+.accordion-item:hover {
+  flex: 2;
+  background-color: #3d1152;
+  color: #ffffff;
+}
+
+.accordion-item:hover .accordion-content p {
+  color: #ffffff;
+}
+
+/* Responsive: apiladas verticalmente en mobile */
+@media (max-width: 768px) {
+  .horizontal-accordion {
+    flex-direction: column;
+  }
+
+  .accordion-item {
+    flex: none;
+    width: 100%;
+  }
+
+  .accordion-item:hover {
+    flex: none;
+  }
+}
+</style>

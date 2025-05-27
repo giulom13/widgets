@@ -1,0 +1,150 @@
+<style>
+.gidio-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.gidio-left,
+.gidio-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.gidio-left h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.gidio-left p {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+/* Botones a ancho completo */
+.gidio-buttons {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.gidio-buttons button {
+  flex: 1;                    /* cada botón ocupa la misma fracción */
+  padding: 16px 0;            /* ajustamos padding vertical, ancho viene del flex */
+  border: none;
+  background-color: #f0f0f0;
+  color: black;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gidio-buttons button:hover {
+  background-color: #3d1152;
+  color: white;
+}
+
+.gidio-right {
+  gap: 30px; /* espacio entre imagen grande y las pequeñas */
+}
+
+.gidio-right img {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.small-images {
+  display: flex;
+  gap: 30px; /* espacio entre viñedo y mujer */
+  margin-top: auto;
+}
+
+.small-images img {
+  width: 50%;
+  max-height: 150px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .gidio-container {
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 30px;
+  }
+
+  .gidio-left,
+  .gidio-right {
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .gidio-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .gidio-left p {
+    font-size: 1.1rem;
+  }
+
+  .gidio-buttons {
+    flex-direction: column;   /* apila los botones en móvil */
+  }
+
+  .gidio-buttons button {
+    width: 100%;              /* en móvil ocupan todo el ancho */
+    padding: 14px 0;
+    font-size: 1rem;
+  }
+
+  .small-images {
+    flex-direction: column;
+  }
+
+  .small-images img {
+    width: 100%;
+  }
+
+  .gidio-right img {
+    max-height: none;
+  }
+}
+</style>
+
+<div class="gidio-container">
+  <div class="gidio-left">
+    <div>
+      <h1>Conectamos <br> pequeños productores <br> con grandes mercados</h1>
+      <p>En Gidio LLC, ayudamos a pequeñas bodegas y productores a llevar su pasión más allá de las fronteras.</p>
+    </div>
+    <div class="gidio-buttons">
+      <button>Nosotros</button>
+      <button>Mercados</button>
+    </div>
+  </div>
+  <div class="gidio-right">
+    <img class="large" src="http://gidio.llc/wp-content/uploads/2025/05/Gidio1-e1747168330880.png" alt="Barco">
+    <div class="small-images">
+      <img src="http://gidio.llc/wp-content/uploads/2025/05/Gidio2.png" alt="Viñedo">
+      <img src="http://gidio.llc/wp-content/uploads/2025/05/Gidio3.png" alt="Mujer eligiendo vino">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,323 @@
+<!-- Galería de botellas -->
+<div class="botellas-galeria">
+  <img src="" class="botella-click" data-id="vino1" alt="Malbec Estate" data-img="">
+  <img src="" class="botella-click" data-id="vino2" alt="Malbec Gran Reserva" data-img="">
+  <img src="" class="botella-click" data-id="vino3" alt="Malbec Reserva" data-img="">
+  <img src="" class="botella-click" data-id="vino4" alt="Chardonnay Estate" data-img="">
+  <img src="" class="botella-click" data-id="vino5" alt="Chardonnay Reserva" data-img="">
+</div>
+
+<!-- Cuadro de descripción -->
+<div class="vino-descripcion-container">
+
+  <!-- MALBEC ESTATE -->
+  <div class="descripcion-vino desc-vino1">
+    <div class="contenido-vino">
+      <img class="botella-descripcion" src="" alt="Malbec Estate">
+      <div class="texto-descripcion">
+        <h3>MALBEC ESTATE 2022</h3>
+        <p>Vista: color rojo intenso con tonos violáceos.<br> Nariz: aromas a frutos rojos, especias y sutiles notas florales.<br> Boca: estructurado, fresco, taninos redondos y final persistente.</p>
+        <p><strong>REGIÓN</strong><br> Valle de Uco, Mendoza<br> País de Origen: Argentina</p>
+        <p><strong>ENÓLOGO:</strong> Leopoldo Jacinto</p>
+        <a href="" class="boton-ficha">DESCARGAR FICHA</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MALBEC GRAN RESERVA -->
+  <div class="descripcion-vino desc-vino2">
+    <div class="contenido-vino">
+      <img class="botella-descripcion" src="" alt="Malbec Gran Reserva">
+      <div class="texto-descripcion">
+        <h3>MALBEC GRAN RESERVA 2019</h3>
+        <p>Vista: rojo profundo con matices oscuros.<br> Nariz: frutas maduras, notas especiadas y presencia de madera bien integrada.<br> Boca: taninos firmes, gran cuerpo y final elegante.</p>
+        <p><strong>REGIÓN</strong><br> Valle de Uco, Mendoza<br> País de Origen: Argentina</p>
+        <p><strong>ENÓLOGO:</strong> Leopoldo Jacinto</p>
+        <a href="" class="boton-ficha">DESCARGAR FICHA</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MALBEC RESERVA -->
+  <div class="descripcion-vino desc-vino3">
+    <div class="contenido-vino">
+      <img class="botella-descripcion" src="" alt="Malbec Reserva">
+      <div class="texto-descripcion">
+        <h3>MALBEC RESERVA 2020</h3>
+        <p>Vista: rojo violáceo intenso.<br> Nariz: frutas negras, ciruela y toques de vainilla.<br> Boca: redondo, amable, con buena persistencia.</p>
+        <p><strong>REGIÓN</strong><br> Valle de Uco, Mendoza<br> País de Origen: Argentina</p>
+        <p><strong>ENÓLOGO:</strong> Leopoldo Jacinto</p>
+        <a href="" class="boton-ficha">DESCARGAR FICHA</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHARDONNAY ESTATE -->
+  <div class="descripcion-vino desc-vino4">
+    <div class="contenido-vino">
+      <img class="botella-descripcion" src="" alt="Chardonnay Estate">
+      <div class="texto-descripcion">
+        <h3>CHARDONNAY ESTATE 2022</h3>
+        <p>Vista: amarillo brillante con reflejos verdosos.<br> Nariz: notas cítricas, florales y frutales.<br> Boca: fresco, equilibrado, con acidez vivaz y final limpio.</p>
+        <p><strong>REGIÓN</strong><br> Valle de Uco, Mendoza<br> País de Origen: Argentina</p>
+        <p><strong>ENÓLOGO:</strong> Leopoldo Jacinto</p>
+        <a href="" class="boton-ficha">DESCARGAR FICHA</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHARDONNAY RESERVA -->
+  <div class="descripcion-vino desc-vino5">
+    <div class="contenido-vino">
+      <img class="botella-descripcion" src="" alt="Chardonnay Reserva">
+      <div class="texto-descripcion">
+        <h3>CHARDONNAY RESERVA 2021</h3>
+        <p>Vista: dorado suave.<br> Nariz: notas de miel, vainilla y frutas blancas.<br> Boca: untuoso, elegante, con final persistente.</p>
+        <p><strong>REGIÓN</strong><br> Valle de Uco, Mendoza<br> País de Origen: Argentina</p>
+        <p><strong>ENÓLOGO:</strong> Leopoldo Jacinto</p>
+        <a href="" class="boton-ficha">DESCARGAR FICHA</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ESTILOS -->
+<style>
+  .botellas-galeria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  padding: 40px 10px;
+  width: 60%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+
+  background-image: url('');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+
+
+  .botella-click {
+    cursor: pointer;
+    height: 100px;
+    width: calc((100% - 8px) / 5);
+    max-width: 10px;
+    transition: transform 0.3s, border 0.3s;
+    object-fit: contain;
+    flex-shrink: 0;
+    border: 2px solid transparent;
+  }
+
+  .botella-click:hover {
+    transform: scale(1.05);
+  }
+
+
+  .vino-descripcion-container {
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
+    border-radius: 10px;
+    position: relative;
+    min-height: 420px;
+    overflow: hidden;
+  }
+
+  .vino-descripcion-container,
+  .vino-descripcion-container * {
+    font-family: 'Baskerville Custom', serif;
+  }
+
+  .descripcion-vino {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+  }
+
+  .descripcion-vino.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .contenido-vino {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+
+  .descripcion-vino.visible .contenido-vino {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .botella-descripcion {
+    width: 150px;
+    max-height: 300px;
+    object-fit: contain;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
+  }
+
+  .descripcion-vino.visible .botella-descripcion {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .texto-descripcion {
+    flex: 1;
+    min-width: 250px;
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
+  }
+
+  .descripcion-vino.visible .texto-descripcion {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .texto-descripcion h3 {
+    margin-top: 0;
+  }
+
+  .boton-ficha {
+    display: inline-block;
+    margin-top: 20px;
+    background: #fff;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+
+  .boton-ficha:hover {
+    background: #e43d30;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .botellas-galeria {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      padding: 20px;
+      justify-items: center;
+    }
+
+    .botella-click {
+      width: 90px;
+      max-height: 200px;
+    }
+
+    .vino-descripcion-container {
+      position: static;
+      min-height: auto;
+      padding: 20px;
+    }
+
+    .descripcion-vino {
+      position: static;
+      opacity: 1 !important;
+      pointer-events: auto;
+      display: none;
+    }
+
+    .descripcion-vino.visible {
+      display: block;
+    }
+
+    .contenido-vino {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px 10px;
+      gap: 20px;
+    }
+
+    .texto-descripcion {
+      text-align: center;
+      max-width: 100%;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    .botella-descripcion {
+      width: 120px;
+      max-height: 220px;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+</style>
+
+<!-- SCRIPT -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const botellas = document.querySelectorAll(".botella-click");
+
+    function mostrarDescripcion(id, imagenSrc) {
+      const actual = document.querySelector(".descripcion-vino.visible");
+      const nueva = document.querySelector(".desc-" + id);
+
+      if (actual === nueva) return;
+
+      document.querySelectorAll(".descripcion-vino").forEach(desc => {
+        desc.classList.remove("visible");
+      });
+
+      if (nueva) {
+        nueva.classList.add("visible");
+        const img = nueva.querySelector(".botella-descripcion");
+        if (img && imagenSrc) {
+          img.src = imagenSrc;
+        }
+      }
+
+      document.querySelectorAll(".botella-click").forEach(el => el.classList.remove("active"));
+      const clicked = document.querySelector(`.botella-click[data-id="${id}"]`);
+      if (clicked) clicked.classList.add("active");
+    }
+
+    botellas.forEach(botella => {
+      botella.addEventListener("click", function () {
+        const id = this.getAttribute("data-id");
+        const imagenSrc = this.getAttribute("data-img");
+        mostrarDescripcion(id, imagenSrc);
+      });
+    });
+
+    const first = botellas[0];
+    if (first) {
+      const id = first.getAttribute("data-id");
+      const img = first.getAttribute("data-img");
+      mostrarDescripcion(id, img);
+    }
+  });
+</script>
